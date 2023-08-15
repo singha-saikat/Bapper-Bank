@@ -11,32 +11,34 @@
         <h1 class="text-violet-500 text-4xl mt-6 text-center  mb-12">let's get some <span class="text-violet-800">Mooooney</span> !!!</h1>
     </header>
     <main class="bg-green-200 h-screen " >
-    <div class=" flex justify-around w-4/5 mx-auto pt-24 mb-12">
+    <div class=" flex justify-around gap-4 w-4/5 mx-auto pt-24 mb-12">
         <div class="w-60 bg-green-500 p-8 text-2xl font-semibold rounded-lg">
             <p>Deposit</p>
-            <p>$00</p>
+            <p>$<span id="deposit-hundle">00</span> </p>
         </div>
         <div class="w-60 bg-fuchsia-500 p-8 text-2xl font-semibold rounded-lg">
             <p>Withdraw</p>
-            <p>$00</p>
+            <p>$<span id="withdraw-previous">00</span> </p>
         </div>
         <div class="w-60 bg-rose-500 p-8 text-2xl font-semibold rounded-lg">
             <p>Balance</p>
-            <p>$1200</p>
+            <p>$ <span id="balance-previous">1200</span></p>
         </div>
     </div>
     <div class="flex gap-4 w-4/5 mx-auto ">
-        <div class="w-96 bg-cyan-500 p-8 text-center rounded-lg">
+        <div class=" w-[50%] bg-cyan-500 px-8 py-4 text-center rounded-lg">
             <p class="mb-4">Please Deposit</p>
-            <input type="text" name="" id="deposit-amount placeholder='$ Deposite amount' ">
+            <input type="text" name="" class="text-black  placeholder:text-slate-400 w-60 rounded-md" id="deposit-amount" placeholder = ' $ Amount you want to deposit' >
+            <button id="btn-click-deposit" class="text-white mt-4 bg-violet-600 p-2 font-semibold rounded-lg hover:bg-sky-700 ">Deposit</button>
         </div>
-        <div class="w-96 bg-violet-500 p-8 text-center rounded-lg">
-            <p class="mb-4">Please Deposit</p>
-            <input type="text" name="" id="deposit-amount placeholder='$ Deposite amount' ">
+        <div class="w-[50%] bg-violet-500 px-8 py-4 text-center rounded-lg">
+            <p class="mb-4">Please Withdraw</p>
+            <input type="text" name="" class=" placeholder:text-slate-400 w-60 rounded-md " id= "withdraw-amount" placeholder=' $ Amount you want to withdraw' >
+            <button id="btn-click-withdraw" class="text-white mt-4 bg-pink-500 p-2 font-semibold rounded-lg hover:bg-sky-700 ">Withdraw</button>
         </div>
     </div>
     </main>
     
-    
+<script src="./javascript/bankScript.js"></script>
 </body>
 </html>
