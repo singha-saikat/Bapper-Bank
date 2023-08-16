@@ -42,12 +42,17 @@ document.querySelector('#btn-click-withdraw').addEventListener('click',function(
     const withdrawPreviousValue = parseFloat(withdrawPreviousValueString);
     
 
-    const finalVerdict = withdrawPreviousValue + withdrawAmount ;
     
-    withdrawPrevious.innerText = finalVerdict ;
     withdrawStore.value = '' ;
     const previousBalance = document.getElementById('balance-previous');
     const previousBalanceValue = parseFloat(previousBalance.innerText);
+    if(withdrawAmount > previousBalanceValue){
+        alert('Insufficient balance');
+        return;
+    }
+    const finalVerdict = withdrawPreviousValue + withdrawAmount ;
+    
+    withdrawPrevious.innerText = finalVerdict ;
     console.log(previousBalanceValue);
     console.log(typeof (previousBalanceValue));
     const lastResult = previousBalanceValue - withdrawAmount ;
